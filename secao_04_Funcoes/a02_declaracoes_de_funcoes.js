@@ -29,3 +29,12 @@ const saudacao3 = () => {
 };
 
 saudacao3(); // A função pode ser chamada normalmente
+
+
+// Dentro de um objeto, as funções podem ser declaradas como métodos:
+const obj = {
+    falar: function() {
+        console.log("Olá, eu sou um método dentro de um objeto.");
+    }
+};
+obj.falar(); // Chama o método falar do objeto obj
