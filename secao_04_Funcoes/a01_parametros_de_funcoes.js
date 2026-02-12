@@ -20,13 +20,19 @@ function funcaoSomar(){
     console.log(total);
 }
 funcaoSomar(1, 2, 3); // 6
-
+// ------------------------------------------
 function funcao2(a, b){
     b = b || 0; // se b for undefined, ele vai receber o valor 0
     console.log(a + b);
 }
 funcao2(2); // 2
+// ------------------------------------------
 function funcao3(a, b = 2, c = 4){ // se b for undefined, ele vai receber o valor 0
     console.log(a + b + c);
 }
-funcao2(2, 10, 4); // 2
+funcao3(2, 10, 4); // 16
+// ------------------------------------------
+function pessoa(nome, sobrenome, idade){
+    console.log(nome, sobrenome, idade);
+}
+pessoa('João', 'Silva', 30); // João Silva 30
