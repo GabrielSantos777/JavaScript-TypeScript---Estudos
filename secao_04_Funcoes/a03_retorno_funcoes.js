@@ -21,3 +21,14 @@ function falarFrase(comeco){
 }
 const falar = falarFrase('Olá');
 console.log(falar('Mundo')); // Olá Mundo
+// -------------------------------------------
+function criarMultiplicador(multiplicador){
+    return function(n){
+        return n * multiplicador;
+    }
+}
+const multiplicarPor2 = criarMultiplicador(2);
+const multiplicarPor3 = criarMultiplicador(3);
+console.log(multiplicarPor2(5)); // 10
+console.log(multiplicarPor3(5)); // 15
+// Função closure é uma função que tem acesso às variáveis do seu escopo léxico, mesmo depois de a função externa ter sido executada. No exemplo acima, a função retornada por criarMultiplicador tem acesso à variável multiplicador, mesmo depois de criarMultiplicador ter sido executada.
