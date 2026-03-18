@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "VisualStudioExptTeam.vscodeintellicode",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+    "formulahendry.auto-rename-tag",
+    "TabNine.tabnine-vscode"
+  ]
+}
