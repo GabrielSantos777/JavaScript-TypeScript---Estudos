@@ -6,7 +6,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.suggest.showIcons": true,
   "editor.suggestSelection": "first",
-  "editor.wordBasedSuggestions": true,
+  "editor.wordBasedSuggestions": "matchingDocuments",
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
   "typescript.tsdk": "node_modules/typescript/lib",
