@@ -25,6 +25,22 @@ export default class Main extends Component {
         index: -1,
     };
 
+    componentDidUpdate(prevProps, prevState) {
+        const { tarefas } = this.state;
+        if (tarefas === prevState.tarefas) return;
+
+        localStorage.setItem("tarefas", JSON.stringify(tarefas));
+    }
+    componentDidMount() {
+        const tarefas = JSON.parse(localStorage.getItem("tarefas"));
+
+        if (!tarefas) return;
+
+        this.setState({
+            tarefas,
+        });
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
         const { tarefas } = this.state;
@@ -89,8 +105,14 @@ export default class Main extends Component {
                         <li key={index}>
                             {tarefa}
                             <div>
-                                <FaEdit onClick={(e) => this.handleEdit(index, e)} className="edit"/>
-                                <FaWindowClose onClick={(e) => this.handleDelete(index, e)} className="delete"/>
+                                <FaEdit
+                                    onClick={(e) => this.handleEdit(index, e)}
+                                    className="edit"
+                                />
+                                <FaWindowClose
+                                    onClick={(e) => this.handleDelete(index, e)}
+                                    className="delete"
+                                />
                             </div>
                         </li>
                     ))}
