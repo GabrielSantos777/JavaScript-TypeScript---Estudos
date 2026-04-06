@@ -22,6 +22,7 @@ export default class Main extends Component {
     state = {
         novaTarefa: "",
         tarefas: [],
+        index: -1,
     };
 
     handleSubmit = (e) => {
@@ -48,7 +49,15 @@ export default class Main extends Component {
     };
 
     handleEdit = (index, e) => {
-        
+        const { tarefas } = this.state;
+        const novaTarefa = prompt("Editar tarefa:", tarefas[index]);
+        if (novaTarefa) {
+            const novasTarefas = [...tarefas];
+            novasTarefas[index] = novaTarefa;
+            this.setState({
+                tarefas: [...novasTarefas],
+            });
+        }
     };
 
     handleChange = (e) => {
