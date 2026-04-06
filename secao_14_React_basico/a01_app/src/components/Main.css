@@ -41,7 +41,7 @@
     justify-content: center;
 }
 
-.tarefas{
+.tarefas {
     margin-top: 30px;
     list-style: none;
     padding: 0;
@@ -56,6 +56,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.tarefas li span {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
 .tarefas li .edit {
