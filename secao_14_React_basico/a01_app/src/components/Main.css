@@ -14,62 +14,8 @@
     text-align: center;
 }
 
-.form {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.form input {
-    padding: 10px 20px;
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
 
-.form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.tarefas {
-    margin-top: 30px;
-    list-style: none;
-    padding: 0;
-}
 
-.tarefas li {
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.tarefas li span {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
 
-.tarefas li .edit {
-    color: #007bff;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.tarefas li .delete {
-    color: #dc3545;
-    cursor: pointer;
-}

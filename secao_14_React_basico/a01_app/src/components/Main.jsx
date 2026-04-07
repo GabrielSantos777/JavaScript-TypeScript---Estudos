@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import "./Main.css";
-
-// FORM
-import { FaPlus, FaWindowClose } from "react-icons/fa";
-
-// TAREFAS
-import { FaEdit } from "react-icons/fa";
+import Tarefas from "./Tarefas/Tarefas";
+import Form from "./Form";
 
 export default class Main extends Component {
     // constructor(props){
@@ -89,34 +85,17 @@ export default class Main extends Component {
             <div className="main">
                 <h1>Lista de Tarefas</h1>
 
-                <form onSubmit={this.handleSubmit} className="form">
-                    <input
-                        onChange={this.handleChange}
-                        type="text"
-                        placeholder="Nova tarefa..."
-                        value={novaTarefa}
-                    />
-                    <button type="submit">
-                        <FaPlus />
-                    </button>
-                </form>
-                <ul className="tarefas">
-                    {tarefas.map((tarefa, index) => (
-                        <li key={index}>
-                            {tarefa}
-                            <div>
-                                <FaEdit
-                                    onClick={(e) => this.handleEdit(index, e)}
-                                    className="edit"
-                                />
-                                <FaWindowClose
-                                    onClick={(e) => this.handleDelete(index, e)}
-                                    className="delete"
-                                />
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+                <Form
+                    handleSubmit={this.handleSubmit}
+                    handleChange={this.handleChange}
+                    novaTarefa={novaTarefa}
+                />
+
+                <Tarefas
+                    tarefas={tarefas}
+                    handleEdit={this.handleEdit}
+                    handleDelete={this.handleDelete}
+                />
             </div>
         );
     }
