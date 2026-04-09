@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from 'react-router-dom'
+import { useParams, useSearchParams, Outlet } from 'react-router-dom'
 import './Index.css'
 
 
@@ -12,6 +12,7 @@ export const Post = () => {
     return (
         <div>
             <h1>Post {`Para: ${id}`} {`QS: ${qs.get('segunda')}`}</h1>
+            <Outlet></Outlet>
         </div>
     )
 }
