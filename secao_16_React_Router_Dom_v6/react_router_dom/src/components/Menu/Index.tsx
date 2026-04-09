@@ -3,7 +3,7 @@ import "./Index.css";
 
 export const Menu = () => {
   return (
-    <nav className="Menu">
+    <nav className="menu">
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -16,6 +16,9 @@ export const Menu = () => {
         </li>
         <li>
           <Link to="/post/10">Posts10</Link>
+        </li>
+        <li>
+          <Link to="/redirect">Redirect</Link>
         </li>
       </ul>
     </nav>
