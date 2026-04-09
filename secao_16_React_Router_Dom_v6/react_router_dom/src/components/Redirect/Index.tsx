@@ -14,7 +14,9 @@ export const Redirect = () => {
         clearTimeout(timeout.current)
 
         if (time <= 0) {
-            navigate('/')
+            navigate('/about', {
+                state: {message: 'You have been redirected from the redirect page'}, 
+            })
             return
         }
         timeout.current = window.setTimeout(() => {
