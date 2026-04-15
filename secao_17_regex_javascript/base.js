@@ -10,8 +10,11 @@ const arquivos = [
     'processo.pdf'
 ]
 
+const html = '<p>Olá Mundo</p> <p>Olá novamente!</p>'
+
 
 module.exports = {
     texto,
-    arquivos
+    arquivos,
+    html
 }
