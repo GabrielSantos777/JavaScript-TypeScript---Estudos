@@ -11,6 +11,15 @@ const arquivos = [
 ]
 
 const html = '<p>Olá Mundo</p> <p>Olá novamente!</p>'
+const html2 = `
+<p 
+    data-teste="teste" 
+    class="teste teste">
+    Olá Mundo
+</p> 
+<div>
+    Eu sou a div!
+</div>`
 
 const alfabeto = 'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789!@#$%¨&*()_+[]{}|;:,.<>?/~`';
 
@@ -43,5 +52,6 @@ module.exports = {
     alfabeto,
     cpfs,
     cpfs2,
-    ips
+    ips,
+    html2
 }
