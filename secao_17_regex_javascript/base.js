@@ -44,6 +44,15 @@ Os CPFS são
 `;
 const ips = 'Os IPs são 192.168.0.1 10.0.0.1 172.16.0.1 0.0.0.0'
 
+const lookahead = `
+    ONLINE 192.168.0.1 ABCDEF inactive
+    ONLINE 192.168.0.2 ABCDEF active
+    OFFLINE 192.168.0.3 ABCDEF active
+    ONLINE 192.168.0.4 ABCDEF active
+    OFFLINE 192.168.0.5 ABCDEF active
+    OFFLINE 192.168.0.6 ABCDEF inactive
+`
+
 
 module.exports = {
     texto,
@@ -53,5 +62,6 @@ module.exports = {
     cpfs,
     cpfs2,
     ips,
-    html2
+    html2,
+    lookahead
 }
