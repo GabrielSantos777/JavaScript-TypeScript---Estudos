@@ -1,0 +1,6 @@
+Executar um arquivo:
+tsc "NOMEDOARQUIVO"
+
+
+INICIAR PROJETO:
+npx tsc --init
