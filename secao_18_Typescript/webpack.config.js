@@ -1,22 +1,18 @@
-import path from "node:path";
-import { fileURLToPath } from "url";
-import webpack from "webpack";
+const path = require("node:path");
 
-// in case you run into any TypeScript error when configuring `devServer`
-import "webpack-dev-server";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const config: webpack.Configuration = {
-  mode:'development',
+/** @type {import("webpack").Configuration} */
+const config = {
+  mode: "development",
   entry: "./src/a16_webpack/index.ts",
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        loader: "ts-loader",
         exclude: /node_modules/,
+        options: {
+          configFile: "tsconfig.front.json",
+        },
       },
     ],
   },
@@ -27,7 +23,7 @@ const config: webpack.Configuration = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist", "assets", "js"),
   },
-  devtool:'source-map',
+  devtool: "source-map",
 };
 
-export default config;
+module.exports = config;
