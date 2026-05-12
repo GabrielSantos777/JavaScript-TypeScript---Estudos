@@ -5,6 +5,7 @@ function mapStrings(array: string[], callbackfn: MapStringsCallback): string[] {
 
     for (let i = 0; i < array.length; i++) {
         const item = array[i];
+        if (item === undefined) continue;
         newArray.push(callbackfn(item))
     }
 
