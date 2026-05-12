@@ -30,4 +30,6 @@ valor = true; // OK
 valor = 30;
 
 const y = 900;
-console.log(valor + y)
+if (typeof valor === "number") {
+    console.log(valor + y);
+}
