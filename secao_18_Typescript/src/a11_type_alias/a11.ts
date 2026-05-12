@@ -18,7 +18,7 @@ const pessoa1: Pessoa = {
     corPreferida: 'Vermelho'
 };
 
-export function setCorPreferida(pessoa: Pessoa, cor: CorPreferida): Pessoa {
+function setCorPreferida(pessoa: Pessoa, cor: CorPreferida): Pessoa {
     return { ... pessoa, corPreferida: cor }
 }
 
