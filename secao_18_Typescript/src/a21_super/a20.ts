@@ -20,19 +20,6 @@ export class Pessoa {
 }
 
 export class Aluno extends Pessoa{
-    // getNomeCompleto(): string {
-    //     return 'Isso vem do aluno: ' + this.nome + ' ' + this.sobrenome;
-    //     const result = super.getNomeCompleto();
-    // }
-    constructor(
-        public nome: string,
-        public sobrenome: string, 
-        private idade: number,
-        protected cpf:string,
-        public sala: string
-    ) {
-        super(nome, sobrenome, idade, cpf);
-    }
 
 }
 
