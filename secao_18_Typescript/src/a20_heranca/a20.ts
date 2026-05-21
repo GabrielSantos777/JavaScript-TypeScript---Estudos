@@ -1,46 +1,47 @@
-export class Pessoa {
+export class Empresa {
+    readonly nome: string, 
+    protected readonly funcionarios: Funcionario[] = [],
+    private readonly cnpj: string
+    constructor(nome:string, cnpj:string) {
+        this.nome = nome;
+        this.cnpj = cnpj;
+    }
+    
+    adicionaFuncionario(funcionario: Funcionario):void{
+        this.funcionarios.push(funcionario);
+    }
+
+    mostrarFuncionarios():void{
+        for(const funcionario of this.funcionarios){
+            console.log(funcionario);
+        }
+    }
+
+}
+
+export class Funcionario {
     constructor(
-        public nome: string,
-        public sobrenome: string, 
-        private idade: number,
-        protected cpf:string
+        readonly empresa: Empresa,
+        public nome: string, 
+        public sobrenome: string,
+        public salario: number
     ) {}
+}
 
-    getIdade(): number {
-        return this.idade;
+export class Jalk extends Empresa{
+    constructor() {
+        super('Jalk', '00.000.000/0000-00');
     }
 
-    getCpf(): string {
-        return this.cpf;
-    }
-
-    getNomeCompleto(): string {
-        return this.nome + ' ' + this.sobrenome;
+    pop():Funcionario | null{
+        const funcionario = this.funcionarios.pop()
+        if(funcionario) return funcionario;
+        return null;
     }
 }
 
-export class Aluno extends Pessoa{
-    // getNomeCompleto(): string {
-    //     return 'Isso vem do aluno: ' + this.nome + ' ' + this.sobrenome;
-    //     const result = super.getNomeCompleto();
-    // }
-    constructor(
-        public nome: string,
-        public sobrenome: string, 
-        private idade: number,
-        protected cpf:string,
-        public sala: string
-    ) {
-        super(nome, sobrenome, idade, cpf);
-    }
-
-}
-
-export class Cliente extends Pessoa{
-    getNomeCompleto(): string {
-        return 'Isso vem do cliente: ' + this.nome + ' ' + this.sobrenome;
-    }
-}
-
-const aluno1 = new Aluno('João', 'Silva', 20, '123.456.789-00');
-console.log(aluno1.getNomeCompleto());
+const empresa1 = new Jalk();
+const funcionario1 = new Funcionario(empresa1, 'João', 'Silva', 1000);
+empresa1.adicionaFuncionario(funcionario1);
+empresa1.mostrarFuncionarios();
+console.log(empresa1);
